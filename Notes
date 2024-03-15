@@ -26,7 +26,6 @@ Ususally the weights and activations are 32 bit floating point precision. They a
 https://huggingface.co/docs/optimum/concept_guides/quantization
 
 There are various techniques, one is GGML
-
 4) Our pick Llama 2
 * Intro ?
 * How to run ?
