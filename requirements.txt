@@ -1,0 +1,5 @@
+ctransformers==0.2.5 # bcoz we will be using Langchain which uses ctransformers, otherwise we would have used lama cpp
+sentence-transformers==2.2.2 # for free embedding model from HuggingFace
+pinecone-client
+langchain==0.0.225
+flask
