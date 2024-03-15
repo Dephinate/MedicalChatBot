@@ -1,0 +1,92 @@
+1) How to check pricing of LLMs?
+	From website https://openai.com/pricing
+	
+2) Opensource vs Paid
+
+Paid
+OpenAI's GPT series
+	Pay to get the api key. Good thing is that it is completely api based. No need to download the model.
+	
+Opensource
+	Github repos of models: https://github.com/eugeneyan/open-llms
+Not hosted anywhere. Need to download that particular model, load it, and use it. Can be downloaded from websites like Hugging Face.
+Need good CPU configuration, requires atleast 8 gb RAM, above i5 processor. 
+
+Powerful Opensource LLM
+1) Meta Llama 2
+2) Google PaLM 2
+3) Falcon
+
+
+3) What is qunatization of an LLM Model?
+To deploy on edge devices like Embedded Systems, Mobile phones, or smart home devices.
+
+Reduce the size, and computational requirements by quantizing model weights, activations
+Ususally the weights and activations are 32 bit floating point precision. They are represented by lower precision like 8-bit integer.
+https://huggingface.co/docs/optimum/concept_guides/quantization
+
+There are various techniques, one is GGML
+
+4) Our pick Llama 2
+* Intro ?
+* How to run ?
+ * https://llama.meta.com/
+ * apply for permissions @ https://llama.meta.com/llama-downloads 
+ * https://llama.meta.com/get-started
+	use email used for huggingface
+ * To get from hugging face : https://huggingface.co/meta-llama
+	before that apply for permissions @ https://llama.meta.com/llama-downloads , then go to model on hugging face and accept log in
+	alternative is to download from public repositiories. Some people do it
+	finetuned chat models will have keyword chat and rest will be for text generation
+	
+ * Do you have a low configuration pc? 
+	use Quantized models
+		Round float to int, int takes less space in RAM. memory vs respinse time trade off
+		https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML
+* How to use with Langchain ?
+	#read : einops 
+	model taken from huggingface
+* How build GenAI project with it ?
+
+
+
+5) Huggingface pipeline
+Tokenize: preprocessing + encode
+model : prediction
+Response : 
+
+to see if your model is chat or text gen, see the tag on hugging face. It might be that name is chat but model is actually text-generation
+
+
+
+
+
+6) Architecture
+Backend
+	Data Integration from pdf
+	Extract data/contents
+	Create Text Chunks
+	Chunks to embeddings
+	Semantic Index
+	Knowledgebase: Pinecone Vector store (Why?: its hosted on a server, it's a remote DB)
+
+Frontend
+User do query
+Query to query embedding
+query embedding to knowledgebase: this will give rank results( returns closests vectors to the query)
+USe llm to filter out the exact result from the ranked results: llm will understand the query and the ranked results and give you a response
+
+
+Tech stack
+python
+Langchain/llamaindex
+Frontend/webapp: Flask
+LLM- meta/llama2
+vector DB- pinecone
+
+
+
+
+* To research
+![Alt text](image.png) : Fine tuned for chat use cases
+read documentation
