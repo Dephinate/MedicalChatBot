@@ -5,4 +5,5 @@
 # langchain_pinecone==0.0.3
 # flask==3.0.2
 # pypdf==4.1.0
+python-dotenv
 -e.

@@ -164,3 +164,4 @@ research.py
 llama-2-7b-chat.ggmlv3.q4_0.bin
 llama-2-7b-chat.Q5_K_M.gguf
 /data/Medical_book.pdf
+.env
