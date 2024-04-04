@@ -49,27 +49,6 @@ def create_file(file_names: list, verbose = True):
     except Exception as e:
         raise e
     
-
-
-def pickel_dump(file_path:str,data: None):
-    try:
-        with open(file_path,"wb") as f:
-            pickle.dump(data,f)
-            logger.info(f"created file at : {file_path}")
-    except Exception as e:
-        raise e
-
-
-def pickel_load(file_path:str):
-    try:
-        if os.path.exists(file_path):
-            with open(file_path, "rb") as f:
-                file_data = pickle.load(f)
-                return file_data
-    except Exception as e:
-        raise e
-
 def load_env(env_file_path:str):
-    # load_check = load_dotenv(dotenv_path=env_file_path)
     load_check = load_dotenv(dotenv_path=env_file_path if env_file_path else None)
     return load_check
