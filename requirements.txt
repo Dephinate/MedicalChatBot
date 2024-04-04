@@ -1,6 +1,7 @@
 ctransformers==0.2.5 # bcoz we will be using Langchain which uses ctransformers, otherwise we would have used lama cpp
 sentence-transformers==2.2.2 # for free embedding model from HuggingFace
-pinecone-client
+pinecone-client==3.1.0
 langchain==0.0.225
+langchain_pinecone==0.0.3
 flask
 pypdf

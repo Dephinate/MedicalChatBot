@@ -89,6 +89,21 @@ vector DB- pinecone
 	1) Download model from https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q4_0.bin?download=true
 	2) Generate pinecone API key
 
+
+
+8) To Try
+1) Different model GGUF
+2) lamacpp
+3) Difference btw with context and no context
+4) Different temperature value
+
+
 * To research
 ![Alt text](image.png) : Fine tuned for chat use cases
 read documentation
+
+
+References:
+Prompts: https://replicate.com/blog/how-to-prompt-llama
+
+llama cpp parameters: https://llama-cpp-python.readthedocs.io/en/latest/api-reference/#llama_cpp.llama_cpp.llama_n_ctx
