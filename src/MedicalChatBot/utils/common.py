@@ -1,6 +1,7 @@
 '''
 1) read yaml
 2) create directory
+3) load api keys
 
 '''
 
