@@ -33,14 +33,15 @@ list_of_files = [
     f"src/{project_name}/config/configurations.py",
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/constants/__init__.py",
+    f"src/{project_name}/helper.py",
     "config/config.yaml",
     "params.yaml", # model related parameters
     "app.py",
-    "main.py", 
     "DockerFile", # for EC2 deployment
     "requirements.txt", # environment setup
     "setup.py",
-    "research/trials.ipynb" # for R&D
+    "research/trials.ipynb", # for R&D
+    "static/.gitkeep"
 
 ]
 
