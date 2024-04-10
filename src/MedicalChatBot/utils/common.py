@@ -2,6 +2,7 @@
 1) read yaml
 2) create directory
 3) load api keys
+4) process documnets returned by db for formatting context
 
 '''
 
@@ -53,3 +54,10 @@ def create_file(file_names: list, verbose = True):
 def load_env(env_file_path:str):
     load_check = load_dotenv(dotenv_path=env_file_path if env_file_path else None)
     return load_check
+
+
+def format_docs(docs):
+    numbered_docs = []
+    for i, doc in enumerate(docs, start=1):  # Enumerate starting from 1
+        numbered_docs.append(f"{i}. {doc.page_content}")  # Add number and content
+    return "\n".join(numbered_docs)  # Join with newlines
