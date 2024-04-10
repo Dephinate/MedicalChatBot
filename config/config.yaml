@@ -1,13 +1,22 @@
 artifacts_root: artifacts
 
-data_Loader: None
+data_loader:
+  data_path: artifacts/data
+  file_types: "*.pdf"
+
+data_splitter:
+  chunk_size: 500
+  chunk_overlap: 50
 
 vectorization:
-  root_dir: artifacts/vector_db
-  db_path: artifacts/vector_db
-  encoder_name: all-mpnet-base-v2
-  model_ckpt: None
-  data_path: None
+  model_name: sentence-transformers/all-MiniLM-L6-v2
 
-model:
-  model_name: gpt-3.5-turbo-instruct
+vector_db:
+  index_name: medical-chatbot
+  namespace: medicalChatBot
+  encoder_name: sentence-transformers/all-MiniLM-L6-v2
+  encoder_platform: HuggingFace
+  num_of_documnets: 3
+
+llm_model:
+  implementation: LlamaCpp
