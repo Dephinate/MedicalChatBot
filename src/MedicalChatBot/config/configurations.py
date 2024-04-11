@@ -30,16 +30,15 @@ class ConfigurationManager:
         params_model = self.params.model_params
 
         modelConfig = ModelConfig(
-            # LlamaCpp
             implementation = config.implementation,
-            model_path = params_model.model_path,
+            model_path = config.model_path,
+            # LlamaCpp
             n_gpu_layers = params_model.n_gpu_layers,
             n_batch = params_model.n_batch,
             n_ctx = params_model.n_ctx,
             f16_kv = params_model.f16_kv, 
             temperature = params_model.temperature,
             # CTransformers
-            model = params_model.model,
             model_type = params_model.model_type,
             max_new_tokens = params_model.max_new_tokens
         )

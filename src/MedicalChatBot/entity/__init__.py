@@ -26,8 +26,6 @@ class VectorizationConfig:
 class ModelConfig:
     implementation: str
     model_path: Path
-    model: str
-    model_type: str
     n_gpu_layers: int
     n_batch: int
     n_ctx: int
