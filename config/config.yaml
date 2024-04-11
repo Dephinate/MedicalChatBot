@@ -10,8 +10,6 @@ data_splitter:
 
 vectorization:
   model_name: sentence-transformers/all-MiniLM-L6-v2
-
-vector_db:
   index_name: medical-chatbot
   namespace: medicalChatBot
   encoder_name: sentence-transformers/all-MiniLM-L6-v2
