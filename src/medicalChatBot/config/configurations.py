@@ -1,6 +1,6 @@
-from MedicalChatBot.constants import  *
-from MedicalChatBot.entity import *
-from MedicalChatBot.utils.common import read_yaml, create_directory, create_file
+from medicalChatBot.constants import  *
+from medicalChatBot.entity import *
+from medicalChatBot.utils.common import read_yaml, create_directory, create_file
 
 class ConfigurationManager:
     def __init__(self,
@@ -16,11 +16,11 @@ class ConfigurationManager:
         config = self.config.vectorization
 
         vectorizationConfig = VectorizationConfig(
+            encoder_platform = config.encoder_platform,
+            encoder_name = config.encoder_name,
             model_name = config.model_name,
             index_name = config.index_name,
             namespace = config.namespace,
-            encoder_name = config.encoder_name,
-            encoder_platform = config.encoder_platform,
             num_of_documnets = config.num_of_documnets
         )
         return vectorizationConfig
@@ -55,7 +55,7 @@ class ConfigurationManager:
     def get_datasplitter_config(self)->SplitterConfig:
         config = self.config.data_splitter
         splitterConfig =  SplitterConfig(
-            data_path = config.chunk_size,
-            file_types = config.chunk_overlap
+            chunk_size = config.chunk_size,
+            chunk_overlap = config.chunk_overlap
         )
         return splitterConfig

@@ -15,17 +15,18 @@ class SplitterConfig:
 
 @dataclass(frozen=True)
 class VectorizationConfig:
+  encoder_platform: str
+  encoder_name: str
   model_name: str
   index_name: str
   namespace: str
-  encoder_name: str
-  encoder_platform: str
   num_of_documnets: int
 
 @dataclass(frozen=True)
 class ModelConfig:
     implementation: str
     model_path: Path
+    model_type: str
     n_gpu_layers: int
     n_batch: int
     n_ctx: int

@@ -12,7 +12,7 @@ from box import ConfigBox
 from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 import yaml
-from misterRetriveRite.logging import logger
+from medicalChatBot.logging import logger
 import pickle
 from dotenv import load_dotenv
 
