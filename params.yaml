@@ -1,12 +1,13 @@
-  LlamaCpp:
-    model_path: llama-2-7b-chat.Q5_K_M.gguf
-    n_gpu_layers: 32
-    n_batch: 512
-    n_ctx: 1024
-    f16_kv: True 
-    temperature: 0.8
-  CTransformers:  
-    model: llama-2-7b-chat.Q5_K_M.gguf
-    model_type: llama
-    max_new_tokens: 512
-    temperature: 0.8
+model_params:
+# LlamaCpp
+  model_path: llama-2-7b-chat.Q5_K_M.gguf
+  n_gpu_layers: 32
+  n_batch: 512
+  n_ctx: 1024
+  f16_kv: True 
+  temperature: 0.8
+
+# CTransformers  
+  model: llama-2-7b-chat.Q5_K_M.gguf
+  model_type: llama
+  max_new_tokens: 512
