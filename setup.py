@@ -2,7 +2,7 @@ import setuptools
 
 __version__ = "0.0.0"
 
-SRC_REPO = "MedicalChatBot" # Source repo name
+SRC_REPO = "medicalChatBot" # Source repo name
 REPO_NAME = "MedicalChatBot" # Github repo name
 AUTHOR_NAME = "Palpendiculal" # Github name
 AUTHOR_EMAIL = "varuns.india@gmail.com" # Github email
