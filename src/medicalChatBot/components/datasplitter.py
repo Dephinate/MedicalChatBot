@@ -8,7 +8,11 @@ class Splitter:
         self.config = config
 
     # function to impement recursive text splitting 
-    def split_recursive(self, extracted_data:None):
-        splitter = RecursiveCharacterTextSplitter(chunk_size = self.config.chunk_size  , chunk_overlap = self.config.chunk_overlap, separators=['\n\n', '\n', '.', ','])
+    def split_recursive(self,extracted_data:None,chunk_size:int=None, chunk_overlap:int=None, separators:list=None):
+        chunk_size = chunk_size or self.chunk_size
+        chunk_overlap = chunk_overlap or self.chunk_overlap
+        separators = separators or self.separators
+        
+        splitter = RecursiveCharacterTextSplitter(chunk_size = chunk_size  , chunk_overlap = chunk_overlap, separators=['\n\n', '\n', '.', ','])
         chunks = splitter.split_documents(extracted_data)
         return chunks

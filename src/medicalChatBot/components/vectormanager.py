@@ -19,7 +19,7 @@ class Vectorizer:
     
     def create_pinecone_instance(self,env_file_path:str = None):
         load_env(env_file_path=env_file_path)
-        print("Key:",os.getenv('PINECONE_API_KEY'))
+        # print("Key:",os.getenv('PINECONE_API_KEY'))
         pc = Pinecone(
             api_key = f"{os.getenv('PINECONE_API_KEY')}"
         )
