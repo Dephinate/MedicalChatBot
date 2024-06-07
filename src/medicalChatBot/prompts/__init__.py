@@ -39,3 +39,14 @@ query:{question}
 information:{context}[/INST]
 
 """
+
+template4 = """
+<s>[INST] <<SYS>>
+Answer the following. If you don't know the answer, return 'I do not know', Do not make an answer.
+<</SYS>>
+Based on the given information,
+query:{question}
+
+information:{context}[/INST]
+
+"""
