@@ -1,4 +1,4 @@
-# End-to-end-Medical-Chatbot-using-Llama2
+# MedicalChatbot
 
 # How to run?
 ### STEPS:
@@ -6,7 +6,7 @@
 Clone the repository
 
 ```bash
-Project repo: https://github.com/
+Project repo: https://github.com/Dephinate/MedicalChatBot.git
 ```
 
 ### STEP 01- Create a conda environment after opening the repository
